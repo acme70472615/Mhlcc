@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="./js/aframe.min.js"></script>
+  <script src="./js/mindar-image-aframe.prod.js"></script>
+  <script src="./js/WEB.js"></script>
+  <link rel="stylesheet" href="./css/mindar.css">
+</head>
+
+<body>
+  <div class="example-container">
+    <a-scene
+      mindar-image="imageTargetSrc: ./assets/mind/targets.mind; showStats: false;"
+      embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <!-- <video id="Bala" autoplay="false" loop="true" src="./assets/portfolio/bala.mp4"></video> -->
+        <!-- <video id="Glate" autoplay="false" loop="true" src="./assets/portfolio/綠拿鐵.mp4"></video> -->
+        <video id="Pawpaw" autoplay="false" loop="true" src="./assets/portfolio/木瓜牛奶.mp4"></video>
+        <video id="Pinaple" autoplay="false" loop="true" src="./assets/portfolio/甜蒸鳳梨汁.mp4"></video>
+        
+        <iframe id="Bala" width="1195" height="672" src="https://www.youtube.com/embed/COLxKY5y-T0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="Glate" width="1195" height="672" src="https://www.youtube.com/embed/GJ4XRzxemCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </a-assets>
+      
+
+      <!-- 影片SRC -->
+      <a-assets>
+        <!-- <iframe id="Bala" autoplay="false" loop="true" src="https://www.youtube.com/embed/GJ4XRzxemCI"></iframe> -->
+          <!-- <video id="Bala" autoplay="false" loop="true" src="https://www.youtube.com/embed/GJ4XRzxemCI"></video> -->
+          <!-- <video id="Glate" autoplay="false" loop="true" src="https://www.youtube.com/watch?v=vvePj3hroHE"></video>
+          <video id="Pawpaw" autoplay="false" loop="true" src="https://www.youtube.com/watch?v=gQUYCqwSjdw"></video>
+          <video id="Pinaple" autoplay="false" loop="true" src="https://www.youtube.com/watch?v=YlU9O-TYkQU"></video> -->
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;"
+        raycaster="far: 10000; objects: .clickable">
+      </a-camera>
+
+      <input id="Now" type="text" value="未辨識" style="width:100%;"placeholder="未辨識"/>
+      <!-- 目標一 -->
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+        <a-video id="vid1" src="#Bala" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-video>
+        <a-input id = "N" src ="#Now" value="芭樂" type="text" style="width:100%;"placeholder="芭樂"/>
+      </a-entity>
+      <!-- 目標二 -->
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 1">
+        <a-video id="vid2" src="#Glate" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-video>
+        <a-input id = "N" src ="#Now"  value="綠拿鐵" type="text" style="width:100%;"placeholder="綠拿鐵"/>
+      </a-entity>
+      <!-- 目標三 -->
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 2">
+        <a-video id="vid3" src="#Pawpaw" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-video>
+      </a-entity>
+      <!-- 目標四 -->
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 3">
+        <a-video id="vid4" src="#Pinaple" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-video>
+      </a-entity>
+    </a-scene>
+  </div>
+</body>
+
+  <script>
+    console.log("前");
+    
+
+    setInterval(function bindCardReaderData() {
+      var NDate = document.querySelector("#N");
+      console.log(NDate);
+      console.log("辨識目標: " + mytarget.target);
+    }, 3000);
+  </script>
+</html>
