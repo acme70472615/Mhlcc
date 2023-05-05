@@ -113,32 +113,14 @@ AFRAME.registerComponent('mytarget', {
         this.el.addEventListener('targetFound', event => {
             console.log("target found");
             //網頁跳轉
-            //window.location.assign("http://210.68.227.123:7499/");
-            //window.location.assign("http://210.68.227.123:7499/VideoPlayer.aspx");
-            //先串木瓜資訊
-            //window.location.assign("https://kmweb.coa.gov.tw/subject/subject.php?id=8272");
-            
+            //window.location.assign("http://");
+
             //document.querySelector("#Video1").play();
             //document.querySelector("#Video2").play();
-
             document.querySelector("#vid1").play();
             document.querySelector("#vid2").play();
             document.querySelector("#vid3").play();
             document.querySelector("#vid4").play();
-            //console.log(N.val());
-            //var NDate =  portfolio = document.querySelector("#N");
-            // var NDate = document.getElementsByName("#Now".values);
-            // console.log("這啥: " + NDate);
-            // console.log("這啥: " + NDate.values);
-            // console.log(document.getElementsByName("#Now"));
-            // console.log(index.Now.values);
-            //console.log("#vid4".src);
-            //conseole.log(document.querySelector("#vid4").src());
-            // var A = document.getElementById('#Now').value.ToString();
-            // var B = document.getElementById('#vid4').value.ToString();
-            // console.log("這啥: " + A);
-            // console.log("這啥: " + B);
-            
         });
         this.el.addEventListener('targetLost', event => {
             console.log("target lost");
