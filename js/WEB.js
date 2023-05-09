@@ -114,13 +114,14 @@ AFRAME.registerComponent('mytarget', {
             console.log("target found");
             //網頁跳轉
             //window.location.assign("http://");
+            window.location.assign("https://www.youtube.com/watch?v=gQUYCqwSjdw");
 
             //document.querySelector("#Video1").play();
             //document.querySelector("#Video2").play();
-            document.querySelector("#vid1").play();
-            document.querySelector("#vid2").play();
-            document.querySelector("#vid3").play();
-            document.querySelector("#vid4").play();
+            //document.querySelector("#vid1").play();
+            //document.querySelector("#vid2").play();
+            //document.querySelector("#vid3").play();
+            //document.querySelector("#vid4").play();
         });
         this.el.addEventListener('targetLost', event => {
             console.log("target lost");
