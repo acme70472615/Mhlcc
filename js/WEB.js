@@ -1,6 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function(){
-
     const A = document.querySelector('#A');
     A.addEventListener("targetFound", event => {
       console.log("targetA found");
@@ -20,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function(){
     D.addEventListener("targetFound", event => {
       console.log("targetD found");
       window.location.assign("https://www.youtube.com/watch?v=YlU9O-TYkQU");
+    });
+    const E = document.querySelector('#E');
+    E.addEventListener("targetFound", event => {
+      console.log("targetE found");
+      window.location.assign("https://www.youtube.com/watch?v=MfFypjLTuQ4");
     });
 
 });
